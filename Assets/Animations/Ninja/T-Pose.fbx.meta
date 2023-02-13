@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: 618a77be6b0d5884ba70cdc6f172c93b
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ninja_Textures_v4_Cinturon
+    second: {fileID: 2100000, guid: fbf6fdc3e8ec9704b8bf86db65a62c60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ninja_Textures_v4_Cuerpo_base_Ceja1
+    second: {fileID: 2100000, guid: ed242b6430a1cf34c83d5838c7543f86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ninja_Textures_v4_Cuerpo_base_Cuerpo1
+    second: {fileID: 2100000, guid: e5c0171471e58a34d9167af9064bb8ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ninja_Textures_v4_Cuerpo_base_Ojos1
+    second: {fileID: 2100000, guid: 2921b845937cba6459d1b23402d71fe1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ninja_Textures_v4_Ropa1
+    second: {fileID: 2100000, guid: 11674b5e6de23694aa38048e0d4912dd, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: T-Pose(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:polySurface36
+      parentName: T-Pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Hips
+      parentName: T-Pose(Clone)
+      position: {x: -0.00000034147516, y: 0.35304785, z: 0.00015733523}
+      rotation: {x: -0.00000036412573, y: -0.00000045620192, z: 0.000012051325, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftUpLeg
+      parentName: Ninja_Textures_v4:Hips
+      position: {x: -0.030150695, y: -0.020167504, z: -0.0012944752}
+      rotation: {x: 0.0018983971, y: -0.008635566, z: 0.9999357, w: 0.0071038962}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftLeg
+      parentName: Ninja_Textures_v4:LeftUpLeg
+      position: {x: -4.98095e-10, y: 0.16321069, z: 8.6132934e-10}
+      rotation: {x: -0.011142687, y: 0.00035985393, z: 0.015488859, w: 0.9998179}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftFoot
+      parentName: Ninja_Textures_v4:LeftLeg
+      position: {x: -1.6067325e-10, y: 0.13817215, z: -7.181923e-11}
+      rotation: {x: 0.49387437, y: -0.0073690168, z: -0.021996014, w: 0.8692238}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftToeBase
+      parentName: Ninja_Textures_v4:LeftFoot
+      position: {x: -1.931859e-12, y: 0.056187004, z: 0.0000000024233968}
+      rotation: {x: 0.27190915, y: 0.019589404, z: -0.005536314, w: 0.96210766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftToe_End
+      parentName: Ninja_Textures_v4:LeftToeBase
+      position: {x: 1.08291865e-11, y: 0.021350604, z: -3.330072e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightUpLeg
+      parentName: Ninja_Textures_v4:Hips
+      position: {x: 0.030150695, y: -0.020167504, z: 0.0005276364}
+      rotation: {x: -0.0021537738, y: -0.012151874, z: 0.9998989, w: -0.007063055}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightLeg
+      parentName: Ninja_Textures_v4:RightUpLeg
+      position: {x: -1.5438878e-10, y: 0.16335474, z: 7.300506e-11}
+      rotation: {x: -0.010071617, y: -0.00040345892, z: -0.015487742, w: 0.9998293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightFoot
+      parentName: Ninja_Textures_v4:RightLeg
+      position: {x: -1.13763866e-10, y: 0.13808195, z: -1.3581279e-10}
+      rotation: {x: 0.489487, y: 0.006949748, z: 0.02218099, w: 0.87170076}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightToeBase
+      parentName: Ninja_Textures_v4:RightFoot
+      position: {x: 3.4366287e-13, y: 0.054927044, z: 0.0000000021946067}
+      rotation: {x: 0.2789416, y: -0.019270007, z: 0.0055985893, w: 0.9600984}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightToe_End
+      parentName: Ninja_Textures_v4:RightToeBase
+      position: {x: 9.12661e-12, y: 0.021056682, z: -1.9428847e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Spine
+      parentName: Ninja_Textures_v4:Hips
+      position: {x: -0, y: 0.036273155, z: -0.0032833724}
+      rotation: {x: -0.04512028, y: 0.0000009995007, z: -0.0000120184695, w: 0.9989816}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Spine1
+      parentName: Ninja_Textures_v4:Spine
+      position: {x: -0, y: 0.0424917, z: -2.9550043e-11}
+      rotation: {x: 7.021942e-26, y: -1.0395173e-13, z: 6.7550024e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Spine2
+      parentName: Ninja_Textures_v4:Spine1
+      position: {x: -0, y: 0.048561987, z: 1.8012755e-10}
+      rotation: {x: 0, y: -0, z: -1.656608e-29, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Neck
+      parentName: Ninja_Textures_v4:Spine2
+      position: {x: -0, y: 0.05463216, z: -0.0000000047088413}
+      rotation: {x: 0.04512062, y: -1.9949044e-21, z: -5.4355466e-20, w: 0.9989816}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:Head
+      parentName: Ninja_Textures_v4:Neck
+      position: {x: -0, y: 0.040282898, z: 0.008682644}
+      rotation: {x: 0, y: 0, z: 9.2951e-40, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:HeadTop_End
+      parentName: Ninja_Textures_v4:Head
+      position: {x: -0, y: 0.06714744, z: 0.014473069}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftShoulder
+      parentName: Ninja_Textures_v4:Spine2
+      position: {x: -0.023318168, y: 0.044919014, z: -0.0009937361}
+      rotation: {x: 0.5576232, y: -0.42699325, z: 0.57815737, w: 0.41529167}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftArm
+      parentName: Ninja_Textures_v4:LeftShoulder
+      position: {x: -2.0783726e-10, y: 0.05328889, z: 0.0000000018416243}
+      rotation: {x: -0.14662762, y: 0.0027307807, z: -0.017177971, w: 0.9890388}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftForeArm
+      parentName: Ninja_Textures_v4:LeftArm
+      position: {x: -1.0276275e-10, y: 0.07339448, z: -9.598716e-10}
+      rotation: {x: 0.00000028345085, y: 0.0042097424, z: -0.00000048857095, w: 0.9999912}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHand
+      parentName: Ninja_Textures_v4:LeftForeArm
+      position: {x: 4.8671303e-11, y: 0.08160937, z: -5.982478e-10}
+      rotation: {x: -0.0018873471, y: -0.06500526, z: 0.055800177, w: 0.9963218}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandPinky1
+      parentName: Ninja_Textures_v4:LeftHand
+      position: {x: -0.011571046, y: 0.030251678, z: 0.0008466521}
+      rotation: {x: -0.0021212208, y: -0.0065639224, z: -0.055135343, w: 0.9984551}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandPinky2
+      parentName: Ninja_Textures_v4:LeftHandPinky1
+      position: {x: 0.000012858527, y: 0.009881101, z: 1.7027069e-10}
+      rotation: {x: 0.000000109098174, y: 0.000022762204, z: -0.00065788644, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandPinky3
+      parentName: Ninja_Textures_v4:LeftHandPinky2
+      position: {x: -0.00000015006074, y: 0.008165615, z: -2.049687e-10}
+      rotation: {x: -0.00000037698098, y: -0.00004400164, z: -0.0009367765, w: 0.9999996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandPinky4
+      parentName: Ninja_Textures_v4:LeftHandPinky3
+      position: {x: -0.000012707819, y: 0.006938961, z: 1.6116025e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandRing1
+      parentName: Ninja_Textures_v4:LeftHand
+      position: {x: -0.0044121384, y: 0.03180547, z: 0.00003506592}
+      rotation: {x: -0.0018513822, y: -0.0017873876, z: -0.054852024, w: 0.9984912}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandRing2
+      parentName: Ninja_Textures_v4:LeftHandRing1
+      position: {x: 0.000022377197, y: 0.011564849, z: -9.8465305e-11}
+      rotation: {x: 0.00000018447685, y: 0.000035819103, z: -0.0008147959, w: 0.9999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandRing3
+      parentName: Ninja_Textures_v4:LeftHandRing2
+      position: {x: 0.0000031072614, y: 0.010991919, z: 1.681066e-10}
+      rotation: {x: 0.00000039371182, y: -0.00006782029, z: -0.0014258932, w: 0.999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandRing4
+      parentName: Ninja_Textures_v4:LeftHandRing3
+      position: {x: -0.000025484407, y: 0.00969289, z: -2.0235766e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandMiddle1
+      parentName: Ninja_Textures_v4:LeftHand
+      position: {x: 0.0034451254, y: 0.03072165, z: -0.000108088054}
+      rotation: {x: -0.0017657125, y: -0.0002844611, z: -0.055378795, w: 0.9984638}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandMiddle2
+      parentName: Ninja_Textures_v4:LeftHandMiddle1
+      position: {x: 0.000012096693, y: 0.014084804, z: 2.0257018e-10}
+      rotation: {x: -0.0000002476611, y: 0.0000042640763, z: -0.00069227815, w: 0.99999976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandMiddle3
+      parentName: Ninja_Textures_v4:LeftHandMiddle2
+      position: {x: -0.0000068480836, y: 0.013140129, z: 1.5326215e-10}
+      rotation: {x: -0.00000022514561, y: 0.0000006853573, z: 0.00005564093, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandMiddle4
+      parentName: Ninja_Textures_v4:LeftHandMiddle3
+      position: {x: -0.0000052485975, y: 0.011863535, z: 1.5871165e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandIndex1
+      parentName: Ninja_Textures_v4:LeftHand
+      position: {x: 0.012538059, y: 0.027819477, z: 0.00037797002}
+      rotation: {x: -0.00176515, y: -0.00028118014, z: -0.05565615, w: 0.99844843}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandIndex2
+      parentName: Ninja_Textures_v4:LeftHandIndex1
+      position: {x: 0.0000037466696, y: 0.013486139, z: 4.887255e-12}
+      rotation: {x: 0.00000019834847, y: -0.0000056653935, z: 0.00029391047, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandIndex3
+      parentName: Ninja_Textures_v4:LeftHandIndex2
+      position: {x: 0.000010810296, y: 0.012436173, z: -5.306937e-11}
+      rotation: {x: 0.00000023294635, y: -0.0000087093595, z: -0.001115769, w: 0.9999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandIndex4
+      parentName: Ninja_Textures_v4:LeftHandIndex3
+      position: {x: -0.0000145563845, y: 0.011133744, z: -2.0034213e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandThumb1
+      parentName: Ninja_Textures_v4:LeftHand
+      position: {x: 0.0105347, y: 0.007852633, z: 0.0037088096}
+      rotation: {x: 0.058700554, y: -0.016588314, z: -0.26567858, w: 0.9621299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandThumb2
+      parentName: Ninja_Textures_v4:LeftHandThumb1
+      position: {x: 0.0031159683, y: 0.010468342, z: -3.0897823e-10}
+      rotation: {x: 0.0006932932, y: 0.0057069273, z: -0.16758601, w: 0.9858407}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandThumb3
+      parentName: Ninja_Textures_v4:LeftHandThumb2
+      position: {x: -0.00069254485, y: 0.014594436, z: 3.2231967e-10}
+      rotation: {x: -0.0008184074, y: 0.0072952667, z: -0.06416366, w: 0.9979124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:LeftHandThumb4
+      parentName: Ninja_Textures_v4:LeftHandThumb3
+      position: {x: -0.0024234222, y: 0.013635419, z: 2.02808e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightShoulder
+      parentName: Ninja_Textures_v4:Spine2
+      position: {x: 0.023318168, y: 0.044898447, z: -0.0007665626}
+      rotation: {x: -0.560645, y: -0.42511508, z: 0.5755617, w: -0.41675302}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightArm
+      parentName: Ninja_Textures_v4:RightShoulder
+      position: {x: 1.5498092e-10, y: 0.05328889, z: 0.0000000018468236}
+      rotation: {x: -0.14709724, y: -0.0023620757, z: 0.012479102, w: 0.9890405}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightForeArm
+      parentName: Ninja_Textures_v4:RightArm
+      position: {x: 6.526708e-11, y: 0.0734257, z: 7.531867e-11}
+      rotation: {x: -0.0000001775699, y: -0.0047574677, z: -0.00000013803744, w: 0.9999887}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHand
+      parentName: Ninja_Textures_v4:RightForeArm
+      position: {x: 1.1215189e-10, y: 0.08160872, z: -4.0423485e-12}
+      rotation: {x: -0.0060847593, y: 0.06399665, z: -0.053524546, w: 0.9964951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandPinky1
+      parentName: Ninja_Textures_v4:RightHand
+      position: {x: 0.012057847, y: 0.031557225, z: 0.0009512661}
+      rotation: {x: 0.0022510197, y: 0.007154428, z: 0.053094514, w: 0.9985613}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandPinky2
+      parentName: Ninja_Textures_v4:RightHandPinky1
+      position: {x: -0.00001363275, y: 0.009604936, z: -2.7668895e-10}
+      rotation: {x: 0.00000042008958, y: -0.000012070301, z: 0.0012505649, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandPinky3
+      parentName: Ninja_Textures_v4:RightHandPinky2
+      position: {x: 0.000007948937, y: 0.0076670274, z: -1.921132e-10}
+      rotation: {x: -0.00000043018684, y: -0.000003132391, z: -0.000043600823, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandPinky4
+      parentName: Ninja_Textures_v4:RightHandPinky3
+      position: {x: 0.0000056840536, y: 0.006273987, z: 1.9738308e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandRing1
+      parentName: Ninja_Textures_v4:RightHand
+      position: {x: 0.004348017, y: 0.032512236, z: -0.00016020339}
+      rotation: {x: 0.0025589424, y: 0.0015357869, z: 0.053505365, w: 0.9985631}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandRing2
+      parentName: Ninja_Textures_v4:RightHandRing1
+      position: {x: -0.0000072416638, y: 0.011541832, z: 5.0418263e-11}
+      rotation: {x: 0.00000013037788, y: 0.0000092744285, z: 0.0008562804, w: 0.99999964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandRing3
+      parentName: Ninja_Textures_v4:RightHandRing2
+      position: {x: 0.000012040716, y: 0.010851009, z: -1.02958704e-10}
+      rotation: {x: -0.00000011649794, y: -0.000010186759, z: -0.00080931187, w: 0.9999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandRing4
+      parentName: Ninja_Textures_v4:RightHandRing3
+      position: {x: -0.000004798809, y: 0.0097494, z: 1.8638431e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandMiddle1
+      parentName: Ninja_Textures_v4:RightHand
+      position: {x: -0.0033398988, y: 0.03090277, z: 0.00016390263}
+      rotation: {x: 0.0026113975, y: 0.000560619, z: 0.05320702, w: 0.99858}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandMiddle2
+      parentName: Ninja_Textures_v4:RightHandMiddle1
+      position: {x: -0.000016586888, y: 0.014179626, z: -1.8572784e-10}
+      rotation: {x: -0.00000031807193, y: -0.000001133569, z: 0.0011747779, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandMiddle3
+      parentName: Ninja_Textures_v4:RightHandMiddle2
+      position: {x: 0.000015053275, y: 0.013036102, z: -1.4640768e-10}
+      rotation: {x: -0.00000016772486, y: -0.0000141055425, z: -0.00049027806, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandMiddle4
+      parentName: Ninja_Textures_v4:RightHandMiddle3
+      position: {x: 0.000001533601, y: 0.011767268, z: 1.7623946e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandIndex1
+      parentName: Ninja_Textures_v4:RightHand
+      position: {x: -0.013065966, y: 0.028196711, z: 0.0003091314}
+      rotation: {x: 0.0025891804, y: 0.0009768964, z: 0.053729557, w: 0.9985517}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandIndex2
+      parentName: Ninja_Textures_v4:RightHandIndex1
+      position: {x: -0.000002477889, y: 0.012937576, z: 1.8172265e-10}
+      rotation: {x: -0.000000061709, y: 0.0000107961505, z: -0.0004443527, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandIndex3
+      parentName: Ninja_Textures_v4:RightHandIndex2
+      position: {x: -0.000013497527, y: 0.012462387, z: 1.3128491e-10}
+      rotation: {x: 0.0000001905939, y: 0.000010765338, z: 0.0012618601, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandIndex4
+      parentName: Ninja_Textures_v4:RightHandIndex3
+      position: {x: 0.000015975578, y: 0.010807044, z: 5.6721204e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandThumb1
+      parentName: Ninja_Textures_v4:RightHand
+      position: {x: -0.010629914, y: 0.007999846, z: 0.003704287}
+      rotation: {x: 0.06212172, y: 0.017189091, z: 0.25939482, w: 0.96361804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandThumb2
+      parentName: Ninja_Textures_v4:RightHandThumb1
+      position: {x: -0.0032508215, y: 0.010558857, z: 2.9065567e-10}
+      rotation: {x: 0.00088041753, y: -0.006689194, z: 0.16700567, w: 0.9859329}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandThumb3
+      parentName: Ninja_Textures_v4:RightHandThumb2
+      position: {x: 0.0005356052, y: 0.014514221, z: 0.0000000010261964}
+      rotation: {x: -0.0009263178, y: -0.007678085, z: 0.08302886, w: 0.9965171}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ninja_Textures_v4:RightHandThumb4
+      parentName: Ninja_Textures_v4:RightHandThumb3
+      position: {x: 0.0027152165, y: 0.013178725, z: -2.4463864e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,7 +7,7 @@ public class Attack_Movement : MonoBehaviour
     private Animator anim;
     public float cooldownTime = 2f;
     private float nextFireTime = 0f;
-    public static int noOfClicks = 0;
+    public int noOfClicks = 0;
     float lastClickedTime = 0;
     float maxComboDelay = 1;
 
@@ -16,6 +16,11 @@ public class Attack_Movement : MonoBehaviour
     public AudioClip AuKick;
 
     public bool Attacking;
+
+    public ParticleSystem Fuego_H1;
+    public ParticleSystem Fuego_H2;
+    public ParticleSystem Fuego_H3;
+    public ParticleSystem Fuego_H4;
 
     [SerializeField] private BoxCollider box;
 
@@ -80,12 +85,19 @@ public class Attack_Movement : MonoBehaviour
         {
             lastClickedTime = Time.time;
             noOfClicks++;
+
             if (noOfClicks == 1)
             {
                 anim.SetBool("Hit1", true);
                 Audios.PlayOneShot(AuSlash);
                 box.enabled = true;
                 Attacking = true;
+                if (anim.GetBool("Hit1") == true )
+                {
+                    Vector3 offsete = new Vector3(0, 1.2f, 0.5f);
+                    var insta = Instantiate(Fuego_H1, transform.position + offsete, Fuego_H1.transform.rotation);
+                    insta.Play();
+                }
             }
             noOfClicks = Mathf.Clamp(noOfClicks, 0, 4);
 
@@ -96,6 +108,13 @@ public class Attack_Movement : MonoBehaviour
                 Audios.PlayOneShot(AuSlash);
                 box.enabled = true;
                 Attacking = true;
+
+                if (anim.GetBool("Hit2") == true)
+                {
+                    Vector3 offsete = new Vector3(0, 1.2f, 0.5f);
+                    var insta = Instantiate(Fuego_H2, transform.position + offsete, Fuego_H1.transform.rotation);
+                    insta.Play();
+                }
             }
 
             if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5 && anim.GetCurrentAnimatorStateInfo(0).IsName("Hit2"))

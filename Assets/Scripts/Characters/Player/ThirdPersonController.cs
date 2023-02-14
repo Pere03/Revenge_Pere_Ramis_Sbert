@@ -79,6 +79,10 @@ namespace StarterAssets
         public float Tornado_SprintSpeed = 10f;
         public CapsuleCollider Coll;
 
+        [Header("Attack")]
+        public Attack_Movement AM;
+        public bool Attack_move;
+
         private void Awake()
         {
             if (_mainCamera == null)
@@ -89,6 +93,7 @@ namespace StarterAssets
 
         private void Start()
         {
+            AM = GetComponent<Attack_Movement>();
             _animator = GetComponentInChildren<Animator>();
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
@@ -111,6 +116,7 @@ namespace StarterAssets
 
         private void Update()
         {
+            Attack_move = AM.Attacking;
            _hasAnimator = TryGetComponent(out _animator);
             JumpAndGravity();
             GroundedCheck();
@@ -123,7 +129,13 @@ namespace StarterAssets
                 Dodge();
             }
 
-            if(Tornado_On == false)
+            if(Attack_move == true && Tornado_On == false)
+            {
+                MoveSpeed = 0;
+                SprintSpeed = 0;
+            }
+
+            if(Tornado_On == false && Attack_move == false)
             {
                 MoveSpeed = Normal_MoveSpeed;
                 SprintSpeed = Normal_SprintSpeed;
@@ -136,7 +148,7 @@ namespace StarterAssets
                 Coll.enabled = false;
             }
         }
-
+        
 
         void Dodge()
         {

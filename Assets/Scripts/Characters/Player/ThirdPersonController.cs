@@ -129,11 +129,13 @@ namespace StarterAssets
                 Dodge();
             }
 
+            /*
             if(Attack_move == true && Tornado_On == false)
             {
                 MoveSpeed = 0;
                 SprintSpeed = 0;
             }
+            */
 
             if(Tornado_On == false && Attack_move == false)
             {

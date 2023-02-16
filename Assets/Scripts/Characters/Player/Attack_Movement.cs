@@ -92,12 +92,12 @@ public class Attack_Movement : MonoBehaviour
                 Audios.PlayOneShot(AuSlash);
                 box.enabled = true;
                 Attacking = true;
-                if (anim.GetBool("Hit1") == true )
+                /*if (anim.GetBool("Hit1") == true )
                 {
                     Vector3 offsete = new Vector3(0, 1.2f, 0.5f);
                     var insta = Instantiate(Fuego_H1, transform.position + offsete, Fuego_H1.transform.rotation);
                     insta.Play();
-                }
+                }*/
             }
             noOfClicks = Mathf.Clamp(noOfClicks, 0, 4);
 
@@ -109,12 +109,12 @@ public class Attack_Movement : MonoBehaviour
                 box.enabled = true;
                 Attacking = true;
 
-                if (anim.GetBool("Hit2") == true)
+                /*if (anim.GetBool("Hit2") == true)
                 {
                     Vector3 offsete = new Vector3(0, 1.2f, 0.5f);
                     var insta = Instantiate(Fuego_H2, transform.position + offsete, Fuego_H1.transform.rotation);
                     insta.Play();
-                }
+                }*/
             }
 
             if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5 && anim.GetCurrentAnimatorStateInfo(0).IsName("Hit2"))

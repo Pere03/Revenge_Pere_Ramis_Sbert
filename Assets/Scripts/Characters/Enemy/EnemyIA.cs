@@ -112,7 +112,10 @@ public class EnemyIA : MonoBehaviour
                 if(isRange == true && isMelee == false)
                 {
                     transform.LookAt(player);
-                    Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                    Vector3 offsete = new Vector3(0, 0f, 0.5f);
+                    //var insta = Instantiate(Fuego_H1, transform.position + offsete, Fuego_H1.transform.rotation);
+                   
+                    Rigidbody rb = Instantiate(projectile, transform.position + offsete, Quaternion.identity).GetComponent<Rigidbody>();
                     rb.AddForce(transform.forward * 20f, ForceMode.Impulse);
                     rb.AddForce(transform.up * 8f, ForceMode.Impulse);
                 }

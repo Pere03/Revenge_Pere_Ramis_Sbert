@@ -14,11 +14,13 @@ public class Player_Abilities : MonoBehaviour
     public GameObject Skeleton;
     public GameObject Geometry;
     public GameObject Shuriken_Obj;
+    public ParticleSystem Bombastic;
     public float maxMana = 100;
     public float currentMana;
     public float costMana;
     public float rechargeMana;
     public float costShuriken;
+    public float costRocks;
 
     [SerializeField] private ManaBar mBar;
     [SerializeField] private Attack_Movement atck;
@@ -54,7 +56,7 @@ public class Player_Abilities : MonoBehaviour
         Player_Atacking = atck.Attacking;
 
         //Tornado Ability
-        if (Input.GetKeyDown(KeyCode.F) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false)
+        if (Input.GetKeyDown(KeyCode.F) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
         {
             //Anim.SetBool("Spinjitzu",true);
             Anim.SetTrigger("Spinj1");
@@ -65,6 +67,15 @@ public class Player_Abilities : MonoBehaviour
             //Anim.SetBool("Spinjitzu", false);
             Tornado_Abilty = false;
             TornadoSpinjitzu();
+        }
+
+        if(Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
+        {
+            Vector3 offsete = new Vector3(0, 0, 1.5f);
+            var insta = Instantiate(Bombastic, transform.position + offsete, transform.rotation);
+            insta.Play();
+
+            currentMana -= costRocks;
         }
 
         if (Anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && Anim.GetCurrentAnimatorStateInfo(0).IsName("Spinjitzu"))
@@ -146,7 +157,7 @@ public class Player_Abilities : MonoBehaviour
             Rigidbody rb = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 20f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            transform.LookAt(Enemy);
+            //transform.LookAt(Enemy);
         }
     }
 

@@ -35,6 +35,7 @@ public class EnemyIA : MonoBehaviour
 
     private void Awake()
     {
+        Anim = GetComponentInChildren<Animator>();
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindWithTag("Player");
@@ -44,8 +45,8 @@ public class EnemyIA : MonoBehaviour
     {
         if (isMelee == true && isRange == false)
         {
-            sightRange = 3;
-            attackRange = 1.5f;
+            sightRange = 2.5f;
+            attackRange = 1f;
         }
 
         if (isRange == true && isMelee == false)
@@ -122,7 +123,16 @@ public class EnemyIA : MonoBehaviour
 
                 if(isMelee == true && isRange == false)
                 {
-                    Player.GetComponent<HealthManager>().DamageCharacter(Damage);
+                    Anim.SetTrigger("EAttack");
+                    transform.LookAt(player);
+                    IEnumerator ExecuteAfterTime()
+                    {
+                        yield return new WaitForSeconds(0.7f);
+
+                        Player.GetComponent<HealthManager>().DamageCharacter(Damage);
+                    }
+
+                    StartCoroutine(ExecuteAfterTime());
                 }
 
                 ///End of attack code

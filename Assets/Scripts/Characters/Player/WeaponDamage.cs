@@ -13,7 +13,7 @@ public class WeaponDamage : MonoBehaviour
 
     void Start()
     {
-        Enemy = GameObject.FindWithTag("Enemy").transform;
+        //Enemy = GameObject.FindWithTag("Enemy").transform;
     }
 
     

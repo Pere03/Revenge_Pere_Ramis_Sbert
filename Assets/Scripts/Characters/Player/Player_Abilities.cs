@@ -44,7 +44,7 @@ public class Player_Abilities : MonoBehaviour
 
         ManaRecharge = false;
 
-        Enemy = GameObject.FindWithTag("Enemy").transform;
+        //Enemy = GameObject.FindWithTag("Enemy").transform;
     }
 
     // Update is called once per frame

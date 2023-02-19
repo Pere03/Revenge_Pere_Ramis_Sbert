@@ -28770,7 +28770,7 @@ GameObject:
   - component: {fileID: 7455448929679567525}
   - component: {fileID: 7454412389112095421}
   m_Layer: 0
-  m_Name: EarthShatter
+  m_Name: EarthShatter - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

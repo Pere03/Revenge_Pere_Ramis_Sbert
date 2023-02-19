@@ -22,7 +22,7 @@ public class EnemyIA : MonoBehaviour
     public int Damage;
     public GameObject Player;
     public Animator Anim;
-    public Animator Img_Anim;
+    //public Animator Img_Anim;
 
     [Header("States")]
     public float sightRange;

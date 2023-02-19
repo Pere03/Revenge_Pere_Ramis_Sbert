@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WeaponDamage : MonoBehaviour
 {
-    public int damage;
+    public int maxDamage;
+    public int currentDamage;
     //public GameObject bloodParticle;
-    public int index;
     public bool wMelee;
     public bool wRanged;
     public Transform Enemy;
@@ -29,7 +29,7 @@ public class WeaponDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);
+            other.gameObject.GetComponent<HealthManager>().DamageCharacter(currentDamage);
 
             /*
             if (bloodParticle != null && hitPoint != null)
@@ -42,6 +42,7 @@ public class WeaponDamage : MonoBehaviour
 
     public void UpdateDamage(int newDamage)
     {
-        damage = newDamage;
+        maxDamage = newDamage;
+        currentDamage = maxDamage;
     }
 }

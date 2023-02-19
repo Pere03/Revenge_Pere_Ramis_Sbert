@@ -12,10 +12,14 @@ public class CharacterStats : MonoBehaviour
     public int[] maxHealthLevels;
     public int[] DamageLevels;
     private HealthManager _healthManager;
+    [SerializeField] private WeaponDamage _Damage;
 
     public TMP_Text LevelTxt;
     public TMP_Text LevelStat;
     public TMP_Text ExpStat;
+    public TMP_Text Health;
+    public TMP_Text Damage;
+
     void Start()
     {
         _healthManager = GetComponent<HealthManager>();
@@ -27,6 +31,8 @@ public class CharacterStats : MonoBehaviour
         LevelTxt.text = level.ToString();
         LevelStat.text = level.ToString();
         ExpStat.text = exp.ToString();
+        Health.text = _healthManager.maxHealth.ToString();
+        Damage.text = _Damage.maxDamage.ToString();
     }
 
     public void AddExperience(int expToAdd)
@@ -38,7 +44,7 @@ public class CharacterStats : MonoBehaviour
             level++;
             exp -= expToLevelUp[level - 1];
             _healthManager.UpdateMaxHealth(maxHealthLevels[level]);
-
+            _Damage.UpdateDamage(DamageLevels[level]);
         }
     }
 }

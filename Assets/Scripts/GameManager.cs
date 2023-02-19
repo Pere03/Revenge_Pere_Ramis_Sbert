@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     public Vector3 RandomSpawnPosition()
     {
-        return new Vector3(Random.Range(-19,18), 1, Random.Range(13,50));
+        return new Vector3(Random.Range(-19,18), 1.539f, Random.Range(13,50));
     }
 
     public void SpawnEnemys()

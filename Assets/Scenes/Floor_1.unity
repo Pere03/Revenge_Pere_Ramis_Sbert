@@ -20243,7 +20243,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   DodgeCoolDown: 1
-  PushAmt: 3
+  PushAmt: 20
   Tornado_On: 0
   PAbilty: {fileID: 0}
   Normal_MoveSpeed: 2.5

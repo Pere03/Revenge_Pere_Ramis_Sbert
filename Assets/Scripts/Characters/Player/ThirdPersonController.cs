@@ -124,7 +124,7 @@ namespace StarterAssets
 
             Tornado_On = PAbilty.Tornado_Abilty;
 
-            if (_input.move != Vector2.zero && Input.GetMouseButtonDown(1) && Tornado_On == false)
+            if (Input.GetMouseButtonDown(1) && Tornado_On == false)
             {
                 Dodge();
             }
@@ -155,6 +155,7 @@ namespace StarterAssets
         void Dodge()
         {
            _rig.AddForce(transform.forward * PushAmt, ForceMode.Impulse);
+           //rig.AddForce(transform.forward * 20f, ForceMode.Impulse);
             _animator.SetTrigger("Roll");
         }
 

@@ -336,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c625ba39411fcc24b8ba599830ac0ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  index: 0
+  maxDamage: 0
+  currentDamage: 0
   wMelee: 1
   wRanged: 0
   Enemy: {fileID: 0}
@@ -700,7 +700,6 @@ MonoBehaviour:
   Damage: 10
   Player: {fileID: 0}
   Anim: {fileID: 0}
-  Img_Anim: {fileID: 0}
   sightRange: 2.5
   attackRange: 1
   playerInSightRange: 0

@@ -14,6 +14,7 @@ public class WeaponDamage : MonoBehaviour
     void Start()
     {
         //Enemy = GameObject.FindWithTag("Enemy").transform;
+        UpdateDamage(maxDamage);
     }
 
     

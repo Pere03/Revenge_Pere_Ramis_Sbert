@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Player_Img
   - Weapon_P
+  - Door_block
   layers:
   - Default
   - TransparentFX

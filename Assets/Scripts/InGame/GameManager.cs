@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public Vector3 SpawnPosition;
     public string Paco;
-    public GameObject Door;
+    //public GameObject Door;
     public int EnemiesCount;
     public int NumberEnemiesFloor;
     void Start()
     {
-        Door.SetActive(true);
+        //PausePanel = GameObject.FindWithTag("Pause_Panel");
+        //StatsPanel = GameObject.FindWithTag("Stats_Panel");
+        //Door.SetActive(true);
         PausePanel.SetActive(false);
         StatsPanel.SetActive(false);
         Time.timeScale = 1;
@@ -50,11 +52,11 @@ public class GameManager : MonoBehaviour
 
         if(EnemiesCount > 0)
         {
-            Door.SetActive(true);
+            //Door.SetActive(true);
         }
         else
         {
-            Door.SetActive(false);
+            //Door.SetActive(false);
         }
     }
 

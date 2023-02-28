@@ -29,8 +29,12 @@ public class Player_Abilities : MonoBehaviour
 
     public Transform Enemy;
 
+    public string nextUuid;
+    public static bool playerCreated;
+
     void Start()
     {
+        playerCreated = true;
         Anim = GetComponent<Animator>();
         Rig = GetComponent<Rigidbody>();
         atck = GetComponent<Attack_Movement>();
@@ -43,7 +47,6 @@ public class Player_Abilities : MonoBehaviour
         UpdateMaxMana(maxMana);
 
         ManaRecharge = false;
-
         //Enemy = GameObject.FindWithTag("Enemy").transform;
     }
 

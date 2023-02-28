@@ -9,6 +9,8 @@ TagManager:
   - Player_Img
   - Weapon_P
   - Door_block
+  - Pause_Panel
+  - Stats_Panel
   layers:
   - Default
   - TransparentFX

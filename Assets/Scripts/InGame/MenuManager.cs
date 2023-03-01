@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject Controlls;
     void Start()
     {
-        
+        Controlls.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -20,5 +20,15 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Floor_1");
+    }
+
+    public void OpenControlls()
+    {
+        Controlls.SetActive(true);
+    }
+
+    public void CloseControlls()
+    {
+        Controlls.SetActive(false);
     }
 }

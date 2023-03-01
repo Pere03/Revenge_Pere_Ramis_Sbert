@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public int NumberEnemiesFloor;
     void Start()
     {
-        Door = GameObject.FindWithTag("Door_block");
+        //Door = GameObject.FindWithTag("Door_block");
         //PausePanel = GameObject.FindWithTag("Pause_Panel");
         //StatsPanel = GameObject.FindWithTag("Stats_Panel");
         //Door.SetActive(true);
@@ -57,11 +57,11 @@ public class GameManager : MonoBehaviour
 
         if(EnemiesCount > 0)
         {
-            Door.SetActive(true);
+            //Door.SetActive(true);
         }
         else
         {
-            Door.SetActive(false);
+            //Door.SetActive(false);
         }
     }
 
@@ -88,22 +88,38 @@ public class GameManager : MonoBehaviour
         StatsPanel.SetActive(false);
     }
 
-    public Vector3 RandomSpawnPosition()
+    public Vector3 RandomSpawnPosition1()
     {
         return new Vector3(Random.Range(-19,18), 1.8f, Random.Range(13,50));
     }
+    public Vector3 RandomSpawnPosition2()
+    {
+        return new Vector3(Random.Range(-19, 18), 1.8f, Random.Range(50, 84));
+    }
+    public Vector3 RandomSpawnPosition3()
+    {
+        return new Vector3(Random.Range(-19, 18), 1.8f, Random.Range(81, 118));
+    }
+
 
     public void SpawnEnemys()
     {
         Scene scene = SceneManager.GetActiveScene();
-        SpawnPosition = RandomSpawnPosition();
+        
         if(scene.name == "Floor_1")
         {
+            SpawnPosition = RandomSpawnPosition1();
             Instantiate(enemyPrefabs[0], SpawnPosition, enemyPrefabs[0].transform.rotation);
         }
         else if (scene.name == "Floor_2")
         {
-            Instantiate(enemyPrefabs[1], SpawnPosition, enemyPrefabs[0].transform.rotation);
+            SpawnPosition = RandomSpawnPosition2();
+            Instantiate(enemyPrefabs[1], SpawnPosition, enemyPrefabs[1].transform.rotation);
+        }
+        else if (scene.name == "Floor_3")
+        {
+            SpawnPosition = RandomSpawnPosition3();
+            Instantiate(enemyPrefabs[2], SpawnPosition, enemyPrefabs[2].transform.rotation);
         }
     }
 }

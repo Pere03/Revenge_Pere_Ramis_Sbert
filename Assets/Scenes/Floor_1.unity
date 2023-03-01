@@ -4071,6 +4071,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 1080742685479457502, guid: 71ea395a8d3b8454fbf4f783fcde7640, type: 3}
   - {fileID: 4966598682554856154, guid: c4f59cdeec6ccfe4da3e0c2d5e44e84e, type: 3}
+  - {fileID: 8077009971810253909, guid: 54f5ddfe832438c47918a4d11974aafd, type: 3}
   SpawnPosition: {x: 0, y: 0, z: 0}
   Paco: 
   Door: {fileID: 0}
@@ -9884,6 +9885,151 @@ PrefabInstance:
       propertyPath: LevelStat
       value: 
       objectReference: {fileID: 1926832141}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[3]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[4]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[5]
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[6]
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[7]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[8]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[9]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[3]
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[4]
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[5]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[6]
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[7]
+      value: 2100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[8]
+      value: 2400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[9]
+      value: 2700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: DamageLevels.Array.data[10]
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: expToLevelUp.Array.data[10]
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[2]
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[3]
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[4]
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[5]
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[6]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[7]
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[8]
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[9]
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[10]
+      value: 700
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99db17ce3002ae449d9ee91d89b9ae0, type: 3}
 --- !u!23 &1870926737549305408
@@ -9959,7 +10105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1870926737549305422
 Transform:
   m_ObjectHideFlags: 0

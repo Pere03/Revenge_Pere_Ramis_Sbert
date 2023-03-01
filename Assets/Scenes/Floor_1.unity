@@ -1725,8 +1725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280123740}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 18.177, y: -4.75, z: 51.57917}
-  m_LocalScale: {x: 0.25507516, y: 3.9180117, z: 2.828883}
+  m_LocalPosition: {x: 18.177, y: -4.75, z: 51.928}
+  m_LocalScale: {x: 1.0855657, y: 3.9180117, z: 2.828883}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 454941125}
@@ -4070,8 +4070,10 @@ MonoBehaviour:
   StatsPanel: {fileID: 322484311}
   enemyPrefabs:
   - {fileID: 1080742685479457502, guid: 71ea395a8d3b8454fbf4f783fcde7640, type: 3}
+  - {fileID: 4966598682554856154, guid: c4f59cdeec6ccfe4da3e0c2d5e44e84e, type: 3}
   SpawnPosition: {x: 0, y: 0, z: 0}
   Paco: 
+  Door: {fileID: 0}
   EnemiesCount: 0
   NumberEnemiesFloor: 0
 --- !u!4 &624043648
@@ -8736,7 +8738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingDirection: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  uuid: FL1_FL2
+  uuid: Floor1_Floor2
 --- !u!1 &1752643288
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,7 +9959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1870926737549305422
 Transform:
   m_ObjectHideFlags: 0
@@ -10055,24 +10057,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &4416926083006774797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2995870696152058771, guid: e99db17ce3002ae449d9ee91d89b9ae0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1504037729403663774}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4416926083006774798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416926083006774797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 287ada0bc3723474ca5863c03479326b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5259612527352024243
 Transform:
   m_ObjectHideFlags: 0
@@ -10206,7 +10190,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6446260905120326342, guid: 3d1ee95a01993f3458cc3d3a5e959836, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d1ee95a01993f3458cc3d3a5e959836, type: 3}
 --- !u!4 &6649514505327202487
 Transform:

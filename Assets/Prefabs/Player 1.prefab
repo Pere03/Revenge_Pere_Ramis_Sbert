@@ -10947,18 +10947,19 @@ GameObject:
   m_Component:
   - component: {fileID: 2510941694486450473}
   - component: {fileID: 8374589735211420499}
+  - component: {fileID: 1834742679346604522}
   - component: {fileID: 633681299581411748}
   - component: {fileID: 4094971855885362207}
   - component: {fileID: 2995870696152058777}
   - component: {fileID: 4087985577246913449}
   - component: {fileID: 2510941694486450524}
   - component: {fileID: 8709756545731721423}
-  - component: {fileID: 1834742679346604522}
   - component: {fileID: 2995870696152058776}
   - component: {fileID: 5004369857326522723}
   - component: {fileID: 1530423062551566319}
   - component: {fileID: 2995870696152058783}
   - component: {fileID: 5703174398685701852}
+  - component: {fileID: 4416926083006774798}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -11004,6 +11005,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1834742679346604522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995870696152058771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072485e512cc29e4d965e35de7b111a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tornado_Abilty: 0
+  ManaRecharge: 0
+  Spinjitzu: 0
+  Shuriken_Attack: 0
+  Shuriken_M_Attack: 0
+  Player_Atacking: 0
+  Tornado: {fileID: 2532590689826522058}
+  Skeleton: {fileID: 5085481349280102999}
+  Geometry: {fileID: 2422219870288859051}
+  Shuriken_Obj: {fileID: 4427707419592779851, guid: cdfa63a9a264ecf4eb9b782b258d8985,
+    type: 3}
+  Bombastic: {fileID: 7455448929679567525, guid: 390e2aa98bbbaa540b3057097b4c49dc,
+    type: 3}
+  maxMana: 100
+  currentMana: 0
+  costMana: 10
+  rechargeMana: 15
+  costShuriken: 5
+  costRocks: 20
+  mBar: {fileID: 0}
+  atck: {fileID: 0}
+  Anim: {fileID: 0}
+  Enemy: {fileID: 0}
+  nextUuid: 
 --- !u!54 &633681299581411748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11120,42 +11157,6 @@ MonoBehaviour:
   box: {fileID: 7267536645947584029}
   Tornado_On: 0
   PAbilty: {fileID: 0}
---- !u!114 &1834742679346604522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2995870696152058771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072485e512cc29e4d965e35de7b111a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tornado_Abilty: 0
-  ManaRecharge: 0
-  Spinjitzu: 0
-  Shuriken_Attack: 0
-  Shuriken_M_Attack: 0
-  Player_Atacking: 0
-  Tornado: {fileID: 2532590689826522058}
-  Skeleton: {fileID: 5085481349280102999}
-  Geometry: {fileID: 2422219870288859051}
-  Shuriken_Obj: {fileID: 4427707419592779851, guid: cdfa63a9a264ecf4eb9b782b258d8985,
-    type: 3}
-  Bombastic: {fileID: 7455448929679567525, guid: 390e2aa98bbbaa540b3057097b4c49dc,
-    type: 3}
-  maxMana: 100
-  currentMana: 0
-  costMana: 10
-  rechargeMana: 15
-  costShuriken: 5
-  costRocks: 20
-  mBar: {fileID: 0}
-  atck: {fileID: 0}
-  Anim: {fileID: 0}
-  Enemy: {fileID: 0}
-  nextUuid: 
 --- !u!114 &2995870696152058776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11449,6 +11450,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4416926083006774798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995870696152058771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287ada0bc3723474ca5863c03479326b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3067527484285149046
 GameObject:
   m_ObjectHideFlags: 0

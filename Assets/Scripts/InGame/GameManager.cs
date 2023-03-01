@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public Vector3 SpawnPosition;
     public string Paco;
-    //public GameObject Door;
+    public GameObject Door;
     public int EnemiesCount;
     public int NumberEnemiesFloor;
     void Start()
     {
+        Door = GameObject.FindWithTag("Door_block");
         //PausePanel = GameObject.FindWithTag("Pause_Panel");
         //StatsPanel = GameObject.FindWithTag("Stats_Panel");
         //Door.SetActive(true);
@@ -32,6 +33,10 @@ public class GameManager : MonoBehaviour
         else if (scene.name == "Floor_2")
         {
             NumberEnemiesFloor = 5;
+        }
+        else if (scene.name == "Floor_3")
+        {
+            NumberEnemiesFloor = 7;
         }
 
         for (int i = 0; i < NumberEnemiesFloor; i++)
@@ -52,11 +57,11 @@ public class GameManager : MonoBehaviour
 
         if(EnemiesCount > 0)
         {
-            //Door.SetActive(true);
+            Door.SetActive(true);
         }
         else
         {
-            //Door.SetActive(false);
+            Door.SetActive(false);
         }
     }
 
@@ -90,7 +95,15 @@ public class GameManager : MonoBehaviour
 
     public void SpawnEnemys()
     {
+        Scene scene = SceneManager.GetActiveScene();
         SpawnPosition = RandomSpawnPosition();
-        Instantiate(enemyPrefabs[0], SpawnPosition, enemyPrefabs[0].transform.rotation);
+        if(scene.name == "Floor_1")
+        {
+            Instantiate(enemyPrefabs[0], SpawnPosition, enemyPrefabs[0].transform.rotation);
+        }
+        else if (scene.name == "Floor_2")
+        {
+            Instantiate(enemyPrefabs[1], SpawnPosition, enemyPrefabs[0].transform.rotation);
+        }
     }
 }

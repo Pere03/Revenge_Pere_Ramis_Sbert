@@ -7,61 +7,41 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PausePanel;
     public GameObject StatsPanel;
-    public GameObject[] enemyPrefabs;
-    public Vector3 SpawnPosition;
+    public GameObject GameOver;
     public string Paco;
     public GameObject Door;
-    public int EnemiesCount;
-    public int NumberEnemiesFloor;
+    public GameObject Player;
+    public HealthManager HP;
+    public Player_Abilities MN;
+    public CharacterStats LVL;
+    public Vector3 startP;
     void Start()
     {
-        //Door = GameObject.FindWithTag("Door_block");
-        //PausePanel = GameObject.FindWithTag("Pause_Panel");
-        //StatsPanel = GameObject.FindWithTag("Stats_Panel");
-        //Door.SetActive(true);
+        startP = Player.transform.position;
+        HP = Player.GetComponent<HealthManager>();
+        MN = Player.GetComponent<Player_Abilities>();
+        LVL = Player.GetComponent<CharacterStats>();
         PausePanel.SetActive(false);
         StatsPanel.SetActive(false);
+        GameOver.SetActive(false);
         Time.timeScale = 1;
-
-        Scene scene = SceneManager.GetActiveScene();
-        Paco = scene.name;
-
-        if (scene.name == "Floor_1")
-        {
-            NumberEnemiesFloor = 3;
-        }
-        else if (scene.name == "Floor_2")
-        {
-            NumberEnemiesFloor = 5;
-        }
-        else if (scene.name == "Floor_3")
-        {
-            NumberEnemiesFloor = 7;
-        }
-
-        for (int i = 0; i < NumberEnemiesFloor; i++)
-        {
-            Invoke("SpawnEnemys", 0.01f);
-        }
-
     }
     void Update()
     {
-        EnemiesCount = FindObjectsOfType<EnemyIA>().Length;
-        //Door = GameObject.FindWithTag("Door_block");
+        
 
         if (PausePanel.activeInHierarchy == false && Input.GetKeyDown(KeyCode.P))
         {
             Open_Pause();
+        } else if (PausePanel.activeInHierarchy == true && Input.GetKeyDown(KeyCode.P))
+        {
+            Close_Pause();
         }
 
-        if(EnemiesCount > 0)
+        if (HP.currentHealth <= 0)
         {
-            //Door.SetActive(true);
-        }
-        else
-        {
-            //Door.SetActive(false);
+            Player.transform.position = startP;
+            GameOverM();
         }
     }
 
@@ -88,38 +68,27 @@ public class GameManager : MonoBehaviour
         StatsPanel.SetActive(false);
     }
 
-    public Vector3 RandomSpawnPosition1()
+    public void ExitMenu()
     {
-        return new Vector3(Random.Range(-19,18), 1.8f, Random.Range(13,50));
-    }
-    public Vector3 RandomSpawnPosition2()
-    {
-        return new Vector3(Random.Range(-19, 18), 1.8f, Random.Range(50, 84));
-    }
-    public Vector3 RandomSpawnPosition3()
-    {
-        return new Vector3(Random.Range(-19, 18), 1.8f, Random.Range(81, 118));
+        SceneManager.LoadScene("Menu");
     }
 
-
-    public void SpawnEnemys()
+    public void GameOverM()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        
-        if(scene.name == "Floor_1")
-        {
-            SpawnPosition = RandomSpawnPosition1();
-            Instantiate(enemyPrefabs[0], SpawnPosition, enemyPrefabs[0].transform.rotation);
-        }
-        else if (scene.name == "Floor_2")
-        {
-            SpawnPosition = RandomSpawnPosition2();
-            Instantiate(enemyPrefabs[1], SpawnPosition, enemyPrefabs[1].transform.rotation);
-        }
-        else if (scene.name == "Floor_3")
-        {
-            SpawnPosition = RandomSpawnPosition3();
-            Instantiate(enemyPrefabs[2], SpawnPosition, enemyPrefabs[2].transform.rotation);
-        }
+        GameOver.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Restart()
+    {
+        LVL.exp = 0;
+        LVL.level = 1;
+        HP.currentHealth = HP.maxHealth;
+        MN.currentMana = MN.maxMana;
+        PausePanel.SetActive(false);
+        StatsPanel.SetActive(false);
+        GameOver.SetActive(false);
+        Time.timeScale = 1;
+        Player.transform.position = startP;
     }
 }

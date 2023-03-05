@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Player_Abilities MN;
     public CharacterStats LVL;
     public Vector3 startP;
+    public int DC;
+    public int ED;
+    public int BD;
     void Start()
     {
         startP = Player.transform.position;
@@ -25,6 +29,7 @@ public class GameManager : MonoBehaviour
         StatsPanel.SetActive(false);
         GameOver.SetActive(false);
         Time.timeScale = 1;
+        LoadUserOptions();
     }
     void Update()
     {
@@ -41,8 +46,17 @@ public class GameManager : MonoBehaviour
         if (HP.currentHealth <= 0)
         {
             Player.transform.position = startP;
-            GameOverM();
+            for (int i = 0; i < 1; i++)
+            {
+                GameOverM();
+            }
         }
+    }
+    public void LoadUserOptions()
+    {
+        ED = PlayerPrefs.GetInt("Enemies_Defeated");
+        BD = PlayerPrefs.GetInt("Boss_Defeated");
+        DC = PlayerPrefs.GetInt("Death_Count");
     }
 
     public void Open_Pause()
@@ -76,6 +90,9 @@ public class GameManager : MonoBehaviour
     public void GameOverM()
     {
         GameOver.SetActive(true);
+        DC++;
+        DataPersistence.sharedInstance.DeathC += DC;
+        DataPersistence.sharedInstance.Data();
         Time.timeScale = 0;
     }
 
@@ -90,5 +107,13 @@ public class GameManager : MonoBehaviour
         GameOver.SetActive(false);
         Time.timeScale = 1;
         Player.transform.position = startP;
+    }
+
+    public void SaveUserOptions()
+    {
+        DataPersistence.sharedInstance.EnemiesD = ED;
+        DataPersistence.sharedInstance.BossD = BD;
+        DataPersistence.sharedInstance.DeathC = DC;
+        DataPersistence.sharedInstance.Data();
     }
 }

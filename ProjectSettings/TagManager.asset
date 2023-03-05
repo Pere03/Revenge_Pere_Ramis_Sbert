@@ -11,6 +11,7 @@ TagManager:
   - Door_block
   - Pause_Panel
   - Stats_Panel
+  - Boss
   layers:
   - Default
   - TransparentFX

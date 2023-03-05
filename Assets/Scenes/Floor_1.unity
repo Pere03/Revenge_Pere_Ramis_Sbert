@@ -4266,6 +4266,9 @@ MonoBehaviour:
   MN: {fileID: 0}
   LVL: {fileID: 0}
   startP: {x: 0, y: 0, z: 0}
+  DC: 0
+  ED: 0
+  BD: 0
 --- !u!4 &624043648
 Transform:
   m_ObjectHideFlags: 0
@@ -5107,7 +5110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 777184717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624043647}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ExitMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &777184717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10677,6 +10692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
         type: 3}
+      propertyPath: expToLevelUp.Array.data[2]
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
       propertyPath: expToLevelUp.Array.data[3]
       value: 900
       objectReference: {fileID: 0}
@@ -10738,37 +10758,37 @@ PrefabInstance:
     - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
         type: 3}
       propertyPath: maxHealthLevels.Array.data[4]
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
-        type: 3}
-      propertyPath: maxHealthLevels.Array.data[5]
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
-        type: 3}
-      propertyPath: maxHealthLevels.Array.data[6]
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
         type: 3}
-      propertyPath: maxHealthLevels.Array.data[7]
-      value: 550
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
-        type: 3}
-      propertyPath: maxHealthLevels.Array.data[8]
+      propertyPath: maxHealthLevels.Array.data[5]
       value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
         type: 3}
+      propertyPath: maxHealthLevels.Array.data[6]
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[7]
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
+      propertyPath: maxHealthLevels.Array.data[8]
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
+        type: 3}
       propertyPath: maxHealthLevels.Array.data[9]
-      value: 650
+      value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 4087985577246913449, guid: e99db17ce3002ae449d9ee91d89b9ae0,
         type: 3}
       propertyPath: maxHealthLevels.Array.data[10]
-      value: 700
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99db17ce3002ae449d9ee91d89b9ae0, type: 3}

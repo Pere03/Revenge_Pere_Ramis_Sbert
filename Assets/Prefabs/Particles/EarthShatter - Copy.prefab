@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c625ba39411fcc24b8ba599830ac0ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
-  index: 0
+  maxDamage: 40
+  currentDamage: 0
   wMelee: 1
   wRanged: 0
   Enemy: {fileID: 0}

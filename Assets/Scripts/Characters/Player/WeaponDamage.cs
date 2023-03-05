@@ -39,6 +39,18 @@ public class WeaponDamage : MonoBehaviour
             }
             */
         }
+
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<HealthManager>().DamageCharacter(currentDamage);
+
+            /*
+            if (bloodParticle != null && hitPoint != null)
+            {
+                Instantiate(bloodParticle, hitPoint.transform.position, hitPoint.transform.rotation);
+            }
+            */
+        }
     }
 
     public void UpdateDamage(int newDamage)

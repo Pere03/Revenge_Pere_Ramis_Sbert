@@ -8,7 +8,14 @@ public class HealthManager : MonoBehaviour
     public int currentHealth;
     [SerializeField] private HealthBar healthBar;
     public int expWhenDefeated;
+    public static HealthManager sharedInstance;
+    public int DE;
+    public int DB;
 
+    private void Awake()
+    {
+       
+    }
 
     void Start()
     {
@@ -30,7 +37,18 @@ public class HealthManager : MonoBehaviour
             if (gameObject.tag.Equals("Enemy"))
             {
                 GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
+                DE++;
+                DataPersistence.sharedInstance.EnemiesD += DE;
+                DataPersistence.sharedInstance.Data();
+                gameObject.SetActive(false);
+            }
 
+            if (gameObject.tag.Equals("Boss"))
+            {
+                //GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
+                DB++;
+                DataPersistence.sharedInstance.EnemiesD += DB;
+                DataPersistence.sharedInstance.Data();
                 gameObject.SetActive(false);
             }
 

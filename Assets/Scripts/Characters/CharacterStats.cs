@@ -47,7 +47,7 @@ public class CharacterStats : MonoBehaviour
             exp -= expToLevelUp[level - 1];
             _healthManager.UpdateMaxHealth(maxHealthLevels[level]);
             _Damage.UpdateDamage(DamageLevels[level]);
-            TDamage.UpdateDamage(TornadoDamageLevels[level]);
+            //TDamage.UpdateTornadoDamage(TornadoDamageLevels[level]);
         }
     }
 }

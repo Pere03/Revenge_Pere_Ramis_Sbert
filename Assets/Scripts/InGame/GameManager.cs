@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI HP_P;
     public Image HP_I;
     public TextMeshProUGUI MN_P;
-    public Image MN_I;
+    public TextMeshProUGUI FloorT;
+    public GameObject CameraCollider;
     void Start()
     {
         startP = Player.transform.position;
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+       
         HP_P.text = HP_I.fillAmount*100 + "%";
         float Value = MN.currentMana;
         MN_P.text = string.Format("{0:#}%", Value);
@@ -58,6 +60,29 @@ public class GameManager : MonoBehaviour
             {
                 GameOverM();
             }
+        }
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Floor_1")
+        {
+            FloorT.text = "Floor 1 (Easy)";
+
+        }
+        else if (scene.name == "Floor_2")
+        {
+            FloorT.text = "Floor 2 (Medium)";
+        }
+        else if (scene.name == "Floor_3")
+        {
+            FloorT.text = "Floor 3 (Hard)";
+        }
+        else if (scene.name == "Floor_4")
+        {
+            FloorT.text = "Rest Floor";
+        }
+        else if (scene.name == "Floor_5")
+        {
+            FloorT.text = "Final Boss";
         }
     }
     public void LoadUserOptions()

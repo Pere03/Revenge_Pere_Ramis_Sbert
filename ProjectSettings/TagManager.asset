@@ -12,6 +12,7 @@ TagManager:
   - Pause_Panel
   - Stats_Panel
   - Boss
+  - CameraCollider
   layers:
   - Default
   - TransparentFX

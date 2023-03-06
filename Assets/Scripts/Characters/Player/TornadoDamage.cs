@@ -14,7 +14,9 @@ public class TornadoDamage : MonoBehaviour
     void Start()
     {
         //Enemy = GameObject.FindWithTag("Enemy").transform;
-        UpdateDamage(maxDamage);
+        //UpdateTornadoDamage(maxDamage);
+
+        currentDamage = maxDamage;
     }
 
 
@@ -31,31 +33,11 @@ public class TornadoDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(currentDamage);
-
-            /*
-            if (bloodParticle != null && hitPoint != null)
-            {
-                Instantiate(bloodParticle, hitPoint.transform.position, hitPoint.transform.rotation);
-            }
-            */
         }
 
         if (other.gameObject.CompareTag("Boss"))
         {
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(currentDamage);
-
-            /*
-            if (bloodParticle != null && hitPoint != null)
-            {
-                Instantiate(bloodParticle, hitPoint.transform.position, hitPoint.transform.rotation);
-            }
-            */
         }
-    }
-
-    public void UpdateDamage(int newTornadoDamage)
-    {
-        maxDamage = newTornadoDamage;
-        currentDamage = maxDamage;
     }
 }

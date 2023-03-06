@@ -47,7 +47,7 @@ public class HealthManager : MonoBehaviour
             {
                 //GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
                 DB++;
-                DataPersistence.sharedInstance.EnemiesD += DB;
+                DataPersistence.sharedInstance.BossD += DB;
                 DataPersistence.sharedInstance.Data();
                 gameObject.SetActive(false);
             }

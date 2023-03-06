@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class GameManager : MonoBehaviour
     public int DC;
     public int ED;
     public int BD;
+
+    public TextMeshProUGUI HP_P;
+    public Image HP_I;
+    public TextMeshProUGUI MN_P;
+    public Image MN_I;
     void Start()
     {
         startP = Player.transform.position;
@@ -33,7 +39,9 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        
+        HP_P.text = HP_I.fillAmount*100 + "%";
+        float Value = MN.currentMana;
+        MN_P.text = string.Format("{0:#}%", Value);
 
         if (PausePanel.activeInHierarchy == false && Input.GetKeyDown(KeyCode.P))
         {

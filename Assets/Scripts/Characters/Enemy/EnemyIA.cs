@@ -22,7 +22,7 @@ public class EnemyIA : MonoBehaviour
     public int Damage;
     public GameObject Player;
     public Animator Anim;
-    //public Animator Img_Anim;
+    public Animator Img_Anim;
 
     [Header("States")]
     public float sightRange;
@@ -39,6 +39,7 @@ public class EnemyIA : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindWithTag("Player");
+        Img_Anim = GameObject.FindWithTag("Player_Img").GetComponent<Animator>();
     }
 
     private void Update()
@@ -125,10 +126,12 @@ public class EnemyIA : MonoBehaviour
                 {
                     Anim.SetTrigger("EAttack");
                     transform.LookAt(player);
+                    
                     IEnumerator ExecuteAfterTime()
                     {
                         yield return new WaitForSeconds(0.7f);
 
+                        Img_Anim.SetTrigger("Img_Damage");
                         Player.GetComponent<HealthManager>().DamageCharacter(Damage);
                     }
 

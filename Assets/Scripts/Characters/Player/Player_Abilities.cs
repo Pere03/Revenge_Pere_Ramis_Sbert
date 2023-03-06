@@ -53,6 +53,10 @@ public class Player_Abilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentMana > 100)
+        {
+            currentMana = 100;
+        }
 
         mBar.UpdateManaBar(maxMana, currentMana);
 
@@ -94,6 +98,7 @@ public class Player_Abilities : MonoBehaviour
 
         if (currentMana <= 0)
         {
+            currentMana = 0;
             Tornado_Abilty = false;
             TornadoSpinjitzu();
             ManaRecharge = true;

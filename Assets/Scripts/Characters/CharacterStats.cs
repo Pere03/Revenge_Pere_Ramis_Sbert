@@ -11,8 +11,10 @@ public class CharacterStats : MonoBehaviour
     public int[] expToLevelUp;
     public int[] maxHealthLevels;
     public int[] DamageLevels;
+    public int[] TornadoDamageLevels;
     private HealthManager _healthManager;
     [SerializeField] private WeaponDamage _Damage;
+    [SerializeField] private TornadoDamage TDamage;
 
     public TMP_Text LevelTxt;
     public TMP_Text LevelStat;
@@ -45,6 +47,7 @@ public class CharacterStats : MonoBehaviour
             exp -= expToLevelUp[level - 1];
             _healthManager.UpdateMaxHealth(maxHealthLevels[level]);
             _Damage.UpdateDamage(DamageLevels[level]);
+            TDamage.UpdateDamage(TornadoDamageLevels[level]);
         }
     }
 }

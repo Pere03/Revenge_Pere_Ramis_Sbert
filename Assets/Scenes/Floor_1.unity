@@ -3230,6 +3230,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428648362}
   m_CullTransparentMesh: 1
+--- !u!1 &446792227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446792228}
+  m_Layer: 0
+  m_Name: StartPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446792228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446792227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.008513629, y: 1.25534, z: 15.293297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454941124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4624,6 +4655,8 @@ MonoBehaviour:
   PausePanel: {fileID: 130020604}
   StatsPanel: {fileID: 1684975329}
   GameOver: {fileID: 397656399}
+  Camera: {fileID: 970841179}
+  enemiesS: []
   Paco: 
   Door: {fileID: 0}
   Player: {fileID: 3152910}
@@ -4639,6 +4672,7 @@ MonoBehaviour:
   MN_P: {fileID: 2012769710}
   FloorT: {fileID: 1785804862}
   CameraCollider: {fileID: 2944947620242859538}
+  canvas: {fileID: 1650188677}
 --- !u!4 &624043648
 Transform:
   m_ObjectHideFlags: 0
@@ -5381,7 +5415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -401.5}
+  m_AnchoredPosition: {x: 0, y: -401.5}
   m_SizeDelta: {x: 300, y: 92.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777184716
@@ -7616,7 +7650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1237455016
 RectTransform:
   m_ObjectHideFlags: 0

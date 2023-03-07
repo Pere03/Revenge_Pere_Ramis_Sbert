@@ -7,37 +7,39 @@ public class Player_Abilities : MonoBehaviour
     public bool Tornado_Abilty;
     public bool ManaRecharge;
     public bool Spinjitzu;
-    public bool Shuriken_Attack;
-    public bool Shuriken_M_Attack;
     public bool Player_Atacking;
+
     public GameObject Tornado;
     public GameObject Skeleton;
     public GameObject Geometry;
     public GameObject Shuriken_Obj;
     public ParticleSystem Bombastic;
+
+
     public float maxMana = 100;
     public float currentMana;
     public float costMana;
     public float rechargeMana;
-    public float costShuriken;
     public float costRocks;
 
     [SerializeField] private ManaBar mBar;
     [SerializeField] private Attack_Movement atck;
     private Rigidbody Rig;
     public Animator Anim;
-
     public Transform Enemy;
-
     public string nextUuid;
     public static bool playerCreated;
 
+    private CharacterStats CS;
+
     void Start()
     {
-        playerCreated = true;
+        CS = GetComponent<CharacterStats>();
         Anim = GetComponent<Animator>();
         Rig = GetComponent<Rigidbody>();
         atck = GetComponent<Attack_Movement>();
+
+        playerCreated = true;
         Tornado_Abilty = false;
         Tornado.SetActive(false);
         Skeleton.SetActive(true);
@@ -47,10 +49,8 @@ public class Player_Abilities : MonoBehaviour
         UpdateMaxMana(maxMana);
 
         ManaRecharge = false;
-        //Enemy = GameObject.FindWithTag("Enemy").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(currentMana > 100)
@@ -62,21 +62,21 @@ public class Player_Abilities : MonoBehaviour
 
         Player_Atacking = atck.Attacking;
 
-        //Tornado Ability
-        if (Input.GetKeyDown(KeyCode.F) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
+        //Activate the Tornado Ability
+        if (Input.GetKeyDown(KeyCode.F) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false && CS.level >= 5)
         {
-            //Anim.SetBool("Spinjitzu",true);
             Anim.SetTrigger("Spinj1");
         }
 
+        //Desactivate the Tornado Ability
         if (Input.GetKeyDown(KeyCode.F) && Tornado_Abilty == true)
         {
-            //Anim.SetBool("Spinjitzu", false);
             Tornado_Abilty = false;
             TornadoSpinjitzu();
         }
 
-        if(Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
+        //Activate the Earth Attack
+        if (Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
         {
             Vector3 offsete = new Vector3(0, 0, 1.5f);
             var insta = Instantiate(Bombastic, transform.position + offsete, transform.rotation);
@@ -109,37 +109,11 @@ public class Player_Abilities : MonoBehaviour
             currentMana += rechargeMana * Time.deltaTime; 
         }
 
-        //Mana Recharge
+        //Desactivate mana recharge when the bar is full
         if (ManaRecharge == true && currentMana >= maxMana)
         {
             ManaRecharge = false;
         }
-
-
-        //Shuriken Normal Attack
-        if (Input.GetKeyDown(KeyCode.R) && ManaRecharge == false && Tornado_Abilty == false && Player_Atacking == false)
-        {
-            Shuriken_Attack = true;
-            ShurikenAttack();
-        }
-        else
-        {
-            Shuriken_Attack = false;
-            ShurikenAttack();
-        }
-
-        if(Shuriken_Attack == true)
-        {
-            currentMana -= costShuriken;
-        }
-
-        //Multiple Shuriken Attack
-        if (Input.GetKeyDown(KeyCode.R) && ManaRecharge == false && Tornado_Abilty == true && Player_Atacking == false)
-        {
-            Shuriken_M_Attack = true;
-            ShurikenMultipleAttack();
-        }
-
     }
 
     public void TornadoSpinjitzu()
@@ -155,39 +129,6 @@ public class Player_Abilities : MonoBehaviour
             Tornado.SetActive(false);
             Skeleton.SetActive(true);
             Geometry.SetActive(true);
-        }
-    }
-
-    public void ShurikenAttack()
-    {
-        if(Shuriken_Attack == true)
-        {
-            Rigidbody rb = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 20f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            //transform.LookAt(Enemy);
-        }
-    }
-
-    public void ShurikenMultipleAttack()
-    {
-        if(Shuriken_M_Attack == true)
-        {
-            Rigidbody rb1 = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb1.AddForce(transform.forward * 20f, ForceMode.Impulse);
-            rb1.AddForce(transform.up * 8f, ForceMode.Impulse);
-
-            Rigidbody rb2 = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb2.AddForce(-transform.forward * 20f, ForceMode.Impulse);
-            rb2.AddForce(transform.up * 8f, ForceMode.Impulse);
-
-            Rigidbody rb3 = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb3.AddForce(transform.right * 20f, ForceMode.Impulse);
-            rb3.AddForce(transform.up * 8f, ForceMode.Impulse);
-
-            Rigidbody rb4 = Instantiate(Shuriken_Obj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb4.AddForce(-transform.right * 20f, ForceMode.Impulse);
-            rb4.AddForce(transform.up * 8f, ForceMode.Impulse);
         }
     }
 

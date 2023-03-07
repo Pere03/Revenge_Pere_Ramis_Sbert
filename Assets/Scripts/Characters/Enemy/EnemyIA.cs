@@ -36,14 +36,21 @@ public class EnemyIA : MonoBehaviour
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
-        player = GameObject.Find("Player").transform;
+        
         agent = GetComponent<NavMeshAgent>();
-        Player = GameObject.FindWithTag("Player");
-        Img_Anim = GameObject.FindWithTag("Player_Img").GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()
     {
+        player = GameObject.FindWithTag("Player").transform;
+        Player = GameObject.FindWithTag("Player");
+        Img_Anim = GameObject.FindWithTag("Player_Img").GetComponent<Animator>();
+
         if (isMelee == true && isRange == false)
         {
             sightRange = 2.5f;

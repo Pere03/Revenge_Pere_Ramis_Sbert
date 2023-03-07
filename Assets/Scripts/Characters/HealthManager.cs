@@ -10,6 +10,7 @@ public class HealthManager : MonoBehaviour
     public int expWhenDefeated;
     public static HealthManager sharedInstance;
     public int DE;
+    public int DC;
     public int DB;
 
     private void Awake()
@@ -50,6 +51,13 @@ public class HealthManager : MonoBehaviour
                 DataPersistence.sharedInstance.BossD += DB;
                 DataPersistence.sharedInstance.Data();
                 gameObject.SetActive(false);
+            }
+
+            if (gameObject.tag.Equals("Player"))
+            {
+                DC++;
+                DataPersistence.sharedInstance.DeathC += DC;
+                DataPersistence.sharedInstance.Data();
             }
 
         }

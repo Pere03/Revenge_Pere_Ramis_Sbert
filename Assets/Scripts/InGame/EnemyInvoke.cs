@@ -13,6 +13,7 @@ public class EnemyInvoke : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
+        //This means that depending on which room we are in, a certain number of enemies will spawn us
         if (scene.name == "Floor_1")
         {
             NumberEnemiesFloor = 3;

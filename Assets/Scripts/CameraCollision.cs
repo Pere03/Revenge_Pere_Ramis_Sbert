@@ -15,6 +15,8 @@ public class CameraCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //With this we do that depending on which room we are in, it will move the camera confiner accordingly to the room.
+
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Floor_1")
         {

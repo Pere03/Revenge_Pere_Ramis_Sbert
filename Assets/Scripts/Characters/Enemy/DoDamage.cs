@@ -17,6 +17,7 @@ public class DoDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        //This means that when he enters with the "player", he will do damage.
         if (other.gameObject.name.Equals("Player"))
         {
             other.gameObject.GetComponent<HealthManager>().DamageCharacter(damage);

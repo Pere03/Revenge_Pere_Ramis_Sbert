@@ -35,6 +35,7 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            //This means that, if we do damage to an enemy and its life reaches 0 or less, it adds experience to the player and increases the counter of defeated enemies
             if (gameObject.tag.Equals("Enemy"))
             {
                 GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
@@ -44,15 +45,16 @@ public class HealthManager : MonoBehaviour
                 gameObject.SetActive(false);
             }
 
+            //This means that, if we do damage to an boss and its life reaches 0 or less, it adds experience to the player and increases the counter of defeated boss
             if (gameObject.tag.Equals("Boss"))
             {
-                //GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
-                DB++;
+                 DB++;
                 DataPersistence.sharedInstance.BossD += DB;
                 DataPersistence.sharedInstance.Data();
                 gameObject.SetActive(false);
             }
 
+            //This means that, if the player's life reaches 0 or less, then the death counter increases
             if (gameObject.tag.Equals("Player"))
             {
                 DC++;

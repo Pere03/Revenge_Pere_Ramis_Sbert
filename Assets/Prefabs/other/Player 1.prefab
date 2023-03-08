@@ -10742,8 +10742,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be17679c9831e904f9180476e3332028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  index: 0
+  maxDamage: 2
+  currentDamage: 0
+  wMelee: 0
+  wRanged: 0
+  Enemy: {fileID: 0}
 --- !u!1 &2540175842018565273
 GameObject:
   m_ObjectHideFlags: 0
@@ -11020,8 +11023,6 @@ MonoBehaviour:
   Tornado_Abilty: 0
   ManaRecharge: 0
   Spinjitzu: 0
-  Shuriken_Attack: 0
-  Shuriken_M_Attack: 0
   Player_Atacking: 0
   Tornado: {fileID: 2532590689826522058}
   Skeleton: {fileID: 5085481349280102999}
@@ -11034,7 +11035,6 @@ MonoBehaviour:
   currentMana: 0
   costMana: 10
   rechargeMana: 15
-  costShuriken: 5
   costRocks: 20
   mBar: {fileID: 0}
   atck: {fileID: 0}
@@ -11103,10 +11103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   exp: 0
-  expToLevelUp: 000000002c01000058020000
-  maxHealthLevels: 00000000c8000000fa000000
-  DamageLevels: 000000000f00000014000000
+  expToLevelUp: 000000002c0100005802000084030000b0040000dc0500000807000034080000600900008c0a0000b80b0000
+  maxHealthLevels: 00000000c80000002c01000090010000f401000058020000bc0200002003000084030000b6030000e8030000
+  DamageLevels: 000000000f0000001900000023000000280000002d0000002d00000032000000320000003200000037000000
+  TornadoDamageLevels: 0000000002000000020000000200000002000000040000000400000004000000040000000400000006000000
   _Damage: {fileID: 5664283725500649508}
+  TDamage: {fileID: 1504037730733645275}
   LevelTxt: {fileID: 0}
   LevelStat: {fileID: 0}
   ExpStat: {fileID: 0}
@@ -11128,6 +11130,9 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   expWhenDefeated: 0
+  DE: 0
+  DC: 0
+  DB: 0
 --- !u!114 &8709756545731721423
 MonoBehaviour:
   m_ObjectHideFlags: 0

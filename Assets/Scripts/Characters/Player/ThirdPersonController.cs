@@ -129,14 +129,6 @@ namespace StarterAssets
                 Dodge();
             }
 
-            /*
-            if(Attack_move == true && Tornado_On == false)
-            {
-                MoveSpeed = 0;
-                SprintSpeed = 0;
-            }
-            */
-
             if(Tornado_On == false && Attack_move == false)
             {
                 MoveSpeed = Normal_MoveSpeed;
@@ -155,8 +147,7 @@ namespace StarterAssets
         void Dodge()
         {
            _rig.AddForce(transform.forward * PushAmt, ForceMode.Impulse);
-           //rig.AddForce(transform.forward * 20f, ForceMode.Impulse);
-            _animator.SetTrigger("Roll");
+           _animator.SetTrigger("Roll");
         }
 
         private void AssignAnimationIDs()
@@ -179,6 +170,7 @@ namespace StarterAssets
             }
         }
 
+        //With this we make it so that we can move the Player towards the direction we want, and in addition to being able to rotate the Player
         private void Move()
         {
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
@@ -228,6 +220,7 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
+
 
         private void JumpAndGravity()
         {

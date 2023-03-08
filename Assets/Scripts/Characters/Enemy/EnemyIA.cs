@@ -33,6 +33,8 @@ public class EnemyIA : MonoBehaviour
     public bool isMelee;
     public bool isRange;
 
+    public AudioSource Asource;
+    public AudioClip damage;
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
@@ -74,6 +76,7 @@ public class EnemyIA : MonoBehaviour
         Tornado_On = Player.GetComponent<Player_Abilities>().Tornado_Abilty;
     }
 
+    //This makes the "NPC" move automatically through the room according to the next point to which it is directed
     private void Patroling()
     {
         if (!walkPointSet) SearchWalkPoint();
@@ -83,8 +86,7 @@ public class EnemyIA : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
+         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
     private void SearchWalkPoint()
@@ -107,6 +109,7 @@ public class EnemyIA : MonoBehaviour
         }
     }
 
+    //Sends the NPC towards the player, and if it is in attack range, it will attack the player.
     private void AttackPlayer()
     {
         if(Tornado_On == false)
@@ -118,17 +121,6 @@ public class EnemyIA : MonoBehaviour
 
             if (!alreadyAttacked)
             {
-                if(isRange == true && isMelee == false)
-                {
-                    transform.LookAt(player);
-                    Vector3 offsete = new Vector3(0, 0f, 0.5f);
-                    //var insta = Instantiate(Fuego_H1, transform.position + offsete, Fuego_H1.transform.rotation);
-                   
-                    Rigidbody rb = Instantiate(projectile, transform.position + offsete, Quaternion.identity).GetComponent<Rigidbody>();
-                    rb.AddForce(transform.forward * 20f, ForceMode.Impulse);
-                    rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-                }
-
                 if(isMelee == true && isRange == false)
                 {
                     Anim.SetTrigger("EAttack");
@@ -138,6 +130,7 @@ public class EnemyIA : MonoBehaviour
                     {
                         yield return new WaitForSeconds(0.7f);
 
+                        Asource.PlayOneShot(damage);
                         Img_Anim.SetTrigger("Img_Damage");
                         Player.GetComponent<HealthManager>().DamageCharacter(Damage);
                     }

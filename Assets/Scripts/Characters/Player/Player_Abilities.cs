@@ -29,7 +29,6 @@ public class Player_Abilities : MonoBehaviour
     public Transform Enemy;
     public string nextUuid;
     public static bool playerCreated;
-
     private CharacterStats CS;
 
     void Start()
@@ -75,7 +74,7 @@ public class Player_Abilities : MonoBehaviour
             TornadoSpinjitzu();
         }
 
-        //Activate the Earth Attack
+        //Activate the Earth Attack and spends an amount of mana
         if (Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
         {
             Vector3 offsete = new Vector3(0, 0, 1.5f);
@@ -96,6 +95,7 @@ public class Player_Abilities : MonoBehaviour
             currentMana -= costMana * Time.deltaTime;
         }
 
+        //This means that if the mana reaches 0 or less, it starts to water itself automatically
         if (currentMana <= 0)
         {
             currentMana = 0;
@@ -137,6 +137,7 @@ public class Player_Abilities : MonoBehaviour
         maxMana = newMaxMana;
         currentMana = maxMana;
     }
+
 
     public void ManaRecharging()
     {

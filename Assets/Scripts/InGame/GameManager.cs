@@ -15,14 +15,15 @@ public class GameManager : MonoBehaviour
     public string Paco;
     public GameObject Door;
     public GameObject Player;
-    public HealthManager HP;
-    public Player_Abilities MN;
-    public CharacterStats LVL;
+    private HealthManager HP;
+    private Player_Abilities MN;
+    private CharacterStats LVL;
     public Vector3 startP;
-    public int DC;
-    public int ED;
-    public int BD;
-
+    private int DC;
+    private int ED;
+    private int BD;
+    public GameObject AS;
+    public GameObject FB;
     public TextMeshProUGUI HP_P;
     public Image HP_I;
     public TextMeshProUGUI MN_P;
@@ -41,7 +42,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         LoadUserOptions();
 
-        
     }
     void Update()
     {
@@ -68,9 +68,12 @@ public class GameManager : MonoBehaviour
            GameOverM();
         }
 
+        //This means that depending on which room we are in, it will show us the name of the room on the screen
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Floor_1")
         {
+            AS.SetActive(true);
+            FB.SetActive(false);
             FloorT.text = "Floor 1 (Easy)";
             Player.SetActive(true);
             canvas.SetActive(true);
@@ -91,12 +94,16 @@ public class GameManager : MonoBehaviour
         else if (scene.name == "Floor_5")
         {
             FloorT.text = "Final Boss";
+            AS.SetActive(false);
+            FB.SetActive(true);
         }
         else if (scene.name == "Menu")
         {
             Player.SetActive(false);
             canvas.SetActive(false);
             Camera.SetActive(false);
+            AS.SetActive(false);
+            FB.SetActive(false);
         }
     }
     public void LoadUserOptions()
@@ -131,6 +138,8 @@ public class GameManager : MonoBehaviour
 
     public void ExitMenu()
     {
+        AS.SetActive(false);
+        FB.SetActive(false);
         Time.timeScale = 1;
         Player.transform.position = new Vector3(0, 0.349f, 15.3f);
         Player.transform.rotation = Quaternion.Euler(0, 0, 0);

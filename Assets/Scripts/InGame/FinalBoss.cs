@@ -12,12 +12,12 @@ public class FinalBoss : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         Boss = FindObjectsOfType<EnemyIA>().Length;
-
-        if(Boss <= 0)
+        //When the boss is killed, it will send us to the Win scene.
+        if (Boss <= 0)
         {
             SceneManager.LoadScene("Win");
         }

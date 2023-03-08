@@ -37,6 +37,7 @@ public class CharacterStats : MonoBehaviour
         Damage.text = _Damage.maxDamage.ToString();
     }
 
+    //This makes us add the experience gained to the player, and if he has the experience to level up, he goes up, and in addition to updating the new stats
     public void AddExperience(int expToAdd)
     {
         exp += expToAdd;

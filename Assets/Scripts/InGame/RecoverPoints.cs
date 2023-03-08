@@ -22,6 +22,8 @@ public class RecoverPoints : MonoBehaviour
         HP = Player.GetComponent<HealthManager>();
         MN = Player.GetComponent<Player_Abilities>();
     }
+
+    //When we are inside the "Recover", it will begin to recover all the Life and Mana points
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

@@ -13,6 +13,7 @@ TagManager:
   - Stats_Panel
   - Boss
   - CameraCollider
+  - MusicBoss
   layers:
   - Default
   - TransparentFX

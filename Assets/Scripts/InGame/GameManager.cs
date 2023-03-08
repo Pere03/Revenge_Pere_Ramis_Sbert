@@ -82,18 +82,22 @@ public class GameManager : MonoBehaviour
         else if (scene.name == "Floor_2")
         {
             FloorT.text = "Floor 2 (Medium)";
+            Player.SetActive(true);
         }
         else if (scene.name == "Floor_3")
         {
             FloorT.text = "Floor 3 (Hard)";
+            Player.SetActive(true);
         }
         else if (scene.name == "Floor_4")
         {
             FloorT.text = "Rest Floor";
+            Player.SetActive(true);
         }
         else if (scene.name == "Floor_5")
         {
             FloorT.text = "Final Boss";
+            Player.SetActive(true);
             AS.SetActive(false);
             FB.SetActive(true);
         }
@@ -149,16 +153,17 @@ public class GameManager : MonoBehaviour
         HP.currentHealth = HP.maxHealth;
         MN.maxMana = 100;
         MN.currentMana = MN.maxMana;
-        Player.SetActive(false);
+        
         GameOver.SetActive(false);
         PausePanel.SetActive(false);
         SceneManager.LoadScene("Menu");
+        Player.SetActive(false);
     }
 
     public void GameOverM()
     {
         GameOver.SetActive(true);
-        Player.SetActive(false);
+        //Player.SetActive(false);
         Time.timeScale = 0;
     }
 

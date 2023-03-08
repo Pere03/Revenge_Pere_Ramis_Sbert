@@ -75,7 +75,7 @@ public class Player_Abilities : MonoBehaviour
         }
 
         //Activate the Earth Attack and spends an amount of mana
-        if (Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false)
+        if (Input.GetKeyDown(KeyCode.G) && Tornado_Abilty == false && currentMana > 0 && ManaRecharge == false && Player_Atacking == false && CS.level >= 2)
         {
             Vector3 offsete = new Vector3(0, 0, 1.5f);
             var insta = Instantiate(Bombastic, transform.position + offsete, transform.rotation);

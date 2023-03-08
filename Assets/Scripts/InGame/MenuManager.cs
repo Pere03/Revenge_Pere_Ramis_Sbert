@@ -14,8 +14,10 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI ED;
     public TextMeshProUGUI BD;
     public TextMeshProUGUI DC;
+    public GameObject musicMenu;
     void Start()
     {
+        musicMenu.SetActive(true);
         Controlls.SetActive(false);
         Achievements.SetActive(false);
         LoadUserOptions();
@@ -29,6 +31,7 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
+        musicMenu.SetActive(false);
         SceneManager.LoadScene("Floor_1");
     }
 
@@ -51,7 +54,10 @@ public class MenuManager : MonoBehaviour
     {
         Achievements.SetActive(false);
     }
-
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
     public void SaveUserOptions()
     {
         DataPersistence.sharedInstance.EnemiesD = EnemiesDefeated;
